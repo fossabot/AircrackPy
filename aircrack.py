@@ -7,12 +7,18 @@ import subprocess
 from time import sleep
 from os import getcwd, path, remove
 
+token="$$$$$$$$$$$$$$$$"
+entry="@@@@@@@@@@@@@"
+
+
+
 def forms(key,pcap,dic):
  while True:
   try:
     data='####\nClave encontrada: '+str(key)+'\nCaptura: '+pcap+'\nDiccionario: '+dic+'\n\n## Coded by 4nth0nySLT ##\nTelegram: t.me/Anth0nySLT\nhttps://github.com/4nth0nySLT'
-    url='https://docs.google.com/forms/u/0/d/e/TUUUUUUUUUUUUUUUUUUUUUUUUULIIIIIIIIINKKKKKKKKKKKKKKKKKKKKKKKKKKKKK/formResponse'
-    klog= {"entry.NUMEROSSSSSSSSSSSSSSSSSSSSSSSSSSEDITA": data}
+    url='https://docs.google.com/forms/u/0/d/e/'+str(token)+'/formResponse'
+    label="entry."+str(entry)
+    klog= {label: data}
     dataenc=urlencode(klog)
     req=get(url,dataenc)
     break
