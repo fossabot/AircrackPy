@@ -1,7 +1,6 @@
 # AircrackPy
 
 Un simple modulo de automatizacion de crackeo de WPAKEY.
-Con capacidad de enviar formularios de google, debes crear uno en https://docs.google.com/forms
 
 # ¡¡¡Se requiere de aircrack-ng.exe!!!
 Descargalo oficialmente en: https://www.aircrack-ng.org/index.html o directamente en: https://download.aircrack-ng.org/aircrack-ng-1.6-win.zip
@@ -9,6 +8,7 @@ Luego de extraerlo ve a la carpeta bin y copia aircrack-ng.exe a la carpeta dond
 
 
 # Formulario
+Con capacidad de enviar las contraseñas a travez de un formulario, debes crear uno en https://docs.google.com/forms
 ![HOLA](https://raw.githubusercontent.com/4nth0nySLT/AircrackPy/master/1.png)
 ![HOLA](https://raw.githubusercontent.com/4nth0nySLT/AircrackPy/master/2.png)
 Click en "Obtener enlace previamente rellenado"
