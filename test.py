@@ -29,6 +29,6 @@ try:
     exit()
 
 except Exception as e:
-    print("UPSS ocurrio un error\n"+e)
+    print("UPSS ocurrio un error\n"+str(e))
     exit()
     
