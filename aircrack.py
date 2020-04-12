@@ -23,7 +23,7 @@ def forms(key,pcap,dic):
     req=get(url,dataenc)
     break
   except Exception as e:
-      print(e)
+      print("UPSS ocurrio un error\n"+e)
       sleep(15)
       pass
 
