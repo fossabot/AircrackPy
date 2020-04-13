@@ -7,6 +7,7 @@
 
 from aircrack import AircrackPy
 cmd=AircrackPy()
+from sys import exit
 from time import sleep
 """
 ##################################
