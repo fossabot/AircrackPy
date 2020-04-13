@@ -28,5 +28,13 @@ token="$$$$$$$$$$$$$$$$"
 entry="@@@@@@@@@@@@@"
 ```
 
+# Importante
+Si descargas la ultima version compilada en https://github.com/4nth0nySLT/AircrackPy/releases
+Solo tendras que modificar las dos primeras lineas del archivo de texto "variables.txt"
+```txt
+$$$$$$$$$$$$$$$$
+@@@@@@@@@@@@@
+```
+
 ![HOLA](https://raw.githubusercontent.com/4nth0nySLT/AircrackPy/master/4.png)
 Aca puedes activar las notificaciones via Email :P
