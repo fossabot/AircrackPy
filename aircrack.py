@@ -67,15 +67,25 @@ class AircrackPy():
         self.file = resolver_ruta('dsfsdcd')
         if path.exists(self.file):
             remove(self.file)
-        self.command = resolver_ruta("aircrack-ng.exe")
+        self.aircrack = resolver_ruta("aircrack-ng.exe")
+        self.crunch=resolver_ruta("crunch_win.exe")
 
     def test(self):
-        proc=subprocess.run([self.command,'-S'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        proc=subprocess.run([self.aircrack,'-S'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         return proc.stdout.decode()
     
     def wpa(self,dic,pcap):
-        proc = subprocess.Popen([self.command,'-w',dic,pcap,'-l',self.file])
-        
+        if x=="1":
+            command=[self.aircrack,'-w',dic,pcap,'-l',self.file]
+        else:
+            bssid=pcap.split("_")[-1].split('.')[0].replace("-",':')
+            el=len(x)
+            while el<10:
+                x+="@"
+                el+=1
+            command='cmd /c '+self.crunch+' 10'+' 10'+' 0123456789'+' -t '+x+' | '+self.aircrack+" -b "+bssid+' -w- '+pcap+' -l '+self.file
+
+        proc = subprocess.Popen(command)
         while True:
            if path.exists(resolver_ruta('dsfsdcd')):
                with open(resolver_ruta('dsfsdcd'),'r') as f:
