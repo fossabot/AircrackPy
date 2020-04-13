@@ -18,6 +18,7 @@ Con capacidad de enviar las contraseñas a través de un formulario, debes crear
 ![HOLA](https://raw.githubusercontent.com/4nth0nySLT/AircrackPy/master/2.png)
 ### Click en "Obtener enlace previamente rellenado"
 ![HOLA](https://raw.githubusercontent.com/4nth0nySLT/AircrackPy/master/3.png)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2F4nth0nySLT%2FAircrackPy.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2F4nth0nySLT%2FAircrackPy?ref=badge_shield)
 
 
 Luego de generar el enlace, aparecerá una opción en la que podremos copiarlo, resultara uno como este:
@@ -39,3 +40,7 @@ $$$$$$$$$$$$$$$$
 
 ![HOLA](https://raw.githubusercontent.com/4nth0nySLT/AircrackPy/master/4.png)
 ### Acá puedes activar las notificaciones vía gmail. :P
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2F4nth0nySLT%2FAircrackPy.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2F4nth0nySLT%2FAircrackPy?ref=badge_large)
