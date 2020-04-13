@@ -36,8 +36,9 @@ def resolver_ruta(ruta_relativa):
 
 with open(resolver_ruta("LICENSE"),"r") as f:
     print(f.read())
-intentos=0
+
 def forms(key,pcap,dic):
+ intentos=0
  while True:
   try:
     intentos+=1
