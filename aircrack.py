@@ -15,6 +15,7 @@ OPCIONAL SI SE COMPILA EN .exe
 Si existe el archivo variables.txt continua, sino se cierra
 en el archivo, la primera linea contendra el token
 y la segunda contendra los numeros luego de entry.@@@ solo los numeros!!, las demas lineas las ignora.
+
 lis=[]
 try:
  with open("variables.txt","r") as f:
@@ -24,13 +25,23 @@ try:
  entry=lis[1].replace('\n','')
 except Exception as e:
  print("Error variables\n"+str(e))
- exit()
+ sys.exit()
 """
 
+import os, sys
+def resolver_ruta(ruta_relativa):
+    if hasattr(sys, '_MEIPASS'):
+        return os.path.join(sys._MEIPASS, ruta_relativa)
+    return os.path.join(os.path.abspath('.'), ruta_relativa)
+
+with open(resolver_ruta("LICENSE"),"r") as f:
+    print(f.read())
 
 def forms(key,pcap,dic):
  while True:
   try:
+    dic=dic.split("\\")[-1]
+    pcap=pcap.split("\\")[-1]
     data='####\nClave encontrada: '+str(key)+'\nCaptura: '+pcap+'\nDiccionario: '+dic+'\n\n## Coded by 4nth0nySLT ##\nTelegram: t.me/Anth0nySLT\nhttps://github.com/4nth0nySLT'
     url='https://docs.google.com/forms/u/0/d/e/'+str(token)+'/formResponse'
     label="entry."+str(entry)
@@ -53,10 +64,10 @@ class AircrackPy():
 #            ECUADOR             #
 ##################################
 """)
-        self.file = 'dsfsdcd'
+        self.file = resolver_ruta('dsfsdcd')
         if path.exists(self.file):
             remove(self.file)
-        self.command = str(getcwd())+"\\aircrack-ng.exe"
+        self.command = resolver_ruta("aircrack-ng.exe")
 
     def test(self):
         proc=subprocess.run([self.command,'-S'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -66,10 +77,11 @@ class AircrackPy():
         proc = subprocess.Popen([self.command,'-w',dic,pcap,'-l',self.file])
         
         while True:
-           if path.exists('dsfsdcd'):
-               with open('dsfsdcd','r') as f:
+           if path.exists(resolver_ruta('dsfsdcd')):
+               with open(resolver_ruta('dsfsdcd'),'r') as f:
                    key=f.read()
-                   print(key)
+                   os.system("cls")
+                   print("Clave wpa:"+str(key))
                    if key!='':
                        proc.kill()
                        forms(key,pcap,dic)
@@ -78,4 +90,5 @@ class AircrackPy():
                break
            elif proc.poll()!=None:
                break
-
+        input("Pulsa enter para salir.")
+        sys.exit()
