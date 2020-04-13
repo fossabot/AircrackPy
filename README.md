@@ -38,4 +38,4 @@ $$$$$$$$$$$$$$$$
 ```
 
 ![HOLA](https://raw.githubusercontent.com/4nth0nySLT/AircrackPy/master/4.png)
-### Acá puedes activar las notificaciones vía email. :P
+### Acá puedes activar las notificaciones vía gmail. :P
