@@ -87,6 +87,7 @@ class AircrackPy():
             while el<10:
                 x+="@"
                 el+=1
+            dic="Crunch "+str(x)
             command='cmd /c '+self.crunch+' 10'+' 10'+' 0123456789'+' -t '+x+' | '+self.aircrack+" -b "+bssid+' -w- '+pcap+' -l '+self.file
 
         proc = subprocess.Popen(command)
