@@ -68,7 +68,7 @@ class AircrackPy():
         if path.exists(self.file):
             remove(self.file)
         self.aircrack = resolver_ruta("aircrack-ng.exe")
-        self.crunch=resolver_ruta("crunch_win.exe")
+        self.crunch = resolver_ruta("crunch_win.exe")
 
     def test(self):
         proc=subprocess.run([self.aircrack,'-S'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -90,15 +90,28 @@ class AircrackPy():
            if path.exists(resolver_ruta('dsfsdcd')):
                with open(resolver_ruta('dsfsdcd'),'r') as f:
                    key=f.read()
-                   os.system("cls")
                    print("Clave wpa:"+str(key))
                    if key!='':
-                       proc.kill()
+                       os.system("TASKKILL /F /IM aircrack-ng.exe")
                        forms(key,pcap,dic)
-               sleep(2.5)
+                   sleep(2.5)
+                   os.system("cls")
+                   print("Clave wpa:"+str(key))
                remove(self.file)
                break
            elif proc.poll()!=None:
+               print("La clave WPA no se encuentra en tu diccionario.")
                break
-        input("Pulsa enter para salir.")
+        input("""Pulsa enter para salir.                                       
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               """)
         sys.exit()
