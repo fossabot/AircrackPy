@@ -3,10 +3,13 @@
 Un simple modulo de automatizacion de crackeo de WPAKEY.
 
 # ¡¡¡Se requiere de aircrack-ng.exe!!!
+https://github.com/aircrack-ng/aircrack-ng
 Descargalo oficialmente en: https://www.aircrack-ng.org/index.html o directamente en: https://download.aircrack-ng.org/aircrack-ng-1.6-win.zip
 Luego de extraerlo ve a la carpeta bin y copia aircrack-ng.exe a la carpeta donde se encuentre el modulo, asi mismo todas las dlls, *.dll, airpcap.dll no es necesaria. 
 O utilizar las que vienen en el repositorio, todos sus derechos reservados a sus creadores.
 
+Opcional crunch_win.exe
+https://github.com/shadwork/Windows-Crunch/
 
 # Formulario
 Con capacidad de enviar las contraseñas a travez de un formulario, debes crear uno en https://docs.google.com/forms
